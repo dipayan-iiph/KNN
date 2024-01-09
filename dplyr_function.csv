@@ -1,13 +1,18 @@
-Function,Code,Required,,,Function,Placeholder,Category,Example,package
-,,,,,,,Rename Columns,,
-,,,,,,,Column Type selection,,
-sample_n,"sample_n(mydata,3)",Num,,,head,my_dataset,Describe Dataset,head(my_dataset),base
-sample_frac,"sample_frac(mydata,0.1)",Num,,,tail,my_dataset,Describe Dataset,tail(my_dataset),base
-distinct,"distinct(mydata,c(col1,col2),.keep_all=T)",,,,summary,my_dataset,Describe Dataset,summary(my_dataset),base
-select,"selct(var1,var2,var3)",,,,str,my_dataset,Describe Dataset,str(my_dataset),base
-,,,,,dim,my_dataset,Describe Dataset,dim(my_dataset),base
-,,,,,nrow,my_dataset,Describe Dataset,nrow(my_dataset),base
-,,,,,ncol,my_dataset,Describe Dataset,ncol(my_dataset),base
-,,,,,names,my_dataset,Describe Dataset,names(my_dataset),base
-,,,,,pct_miss,my_dataset,% Missing Dataset,pct_miss(my_dataset),naniar
-,,,,,miss_col,my_dataset,Missing in Column,colSums(is.na(my_dataset)),base
+Function,Placeholder,Category,Example,package
+,,Rename Columns,,
+,,Column Type selection,,
+head,my_dataset,Describe Dataset,head(my_dataset),base
+tail,my_dataset,Describe Dataset,tail(my_dataset),base
+summary,my_dataset,Describe Dataset,summary(my_dataset),base
+str,my_dataset,Describe Dataset,str(my_dataset),base
+dim,my_dataset,Describe Dataset,dim(my_dataset),base
+nrow,my_dataset,Describe Dataset,nrow(my_dataset),base
+ncol,my_dataset,Describe Dataset,ncol(my_dataset),base
+names,my_dataset,Describe Dataset,names(my_dataset),base
+pct_miss,my_dataset,% Missing Dataset,pct_miss(my_dataset),naniar
+miss_col,my_dataset,Missing in Column,colSums(is.na(my_dataset)),base
+imput_col,my_dataset,Impute Column Missing,"apply(my_dataset,2,median)",
+print,my_var,print,print(my_var),base
+str_length,"c(var1,var2..)",String Length,"str_length(c(""John"",""Nat""))",stringr
+str_sub,"c(var1,var2..),Start_Pos, Number of Character",String Cut,"str_sub(""Rstudio"",2,3)",base
+str_detect,"string,pattern",String Detect,"str_detect(""pizza"",pattern=""zz"")",stringr
